@@ -11,7 +11,7 @@ from zerotwobot import telethn as tbot
 
 @register(pattern=("/aliv"))
 async def awake(event):
-  TEXT = f"**`Hi I'm Officer Jenny.`** \n\n"
+  TEXT = f"`Hi I'm Officer Jenny.` \n\n"
   TEXT += "❍ **I'm Working Properly** \n\n"
   TEXT += f"❍ **My Master : [AYATO](https://t.me/SILVER_KING)** \n\n"
   TEXT += f"❍ **Library Version :** `{telever}` \n\n"
