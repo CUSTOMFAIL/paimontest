@@ -1,4 +1,4 @@
-mport os
+import os
 import re
 from platform import python_version as kontol
 from telethon import events, Button
