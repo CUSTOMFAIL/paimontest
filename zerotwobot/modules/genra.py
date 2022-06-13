@@ -13,7 +13,7 @@ from zerotwobot import telethn as tbot
 async def awake(event):
   TEXT = f"`Hi I'm Officer Jenny.` \n\n"
   TEXT += "❍ **I'm Working Properly** \n\n"
-  TEXT += f"❍ **My Master : [AYATO](https://t.me/SILVER_KING)** \n\n"
+  TEXT += f"❍ **`My Master : [AYATO](https://t.me/SILVER_KING)`** \n\n"
   TEXT += f"❍ **Library Version :** `{telever}` \n\n"
   TEXT += f"❍ **Telethon Version :** `{tlhver}` \n\n"
   TEXT += f"❍ **Pyrogram Version :** `{pyrover}` \n\n"
