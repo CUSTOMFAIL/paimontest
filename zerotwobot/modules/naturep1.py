@@ -13,7 +13,7 @@ def mewtwo(update: Update, context: CallbackContext):
     reply_text = (
         msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
     )
-    reply_text(r"Best Normal - Timid, modest")
+    reply_text(r"Best Normal - Timid, modest\nCringe")
     reply_text(r"Best Y  -  Timid, hasty")
     reply_text(r"Best X - Naive and jolly")
     
