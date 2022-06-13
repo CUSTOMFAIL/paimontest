@@ -9,8 +9,6 @@ from zerotwobot.events import register
 from zerotwobot import telethn as tbot
 
 
-PHOTO = "https://telegra.ph/file/38513d13b5f772f2a36bd.jpg"
-
 @register(pattern=("/aliv"))
 async def awake(event):
   TEXT = f"**`Hi I'm Officer Jenny.`** \n\n"
@@ -20,4 +18,4 @@ async def awake(event):
   TEXT += f"❍ **Telethon Version :** `{tlhver}` \n\n"
   TEXT += f"❍ **Pyrogram Version :** `{pyrover}` \n\n"
   TEXT += "**Thanks For Adding Me Here ❤️**"
-  await tbot.send_file(event.chat_id, TEXT)
+  await tbot.send_message(event.chat_id, TEXT)
