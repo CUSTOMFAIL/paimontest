@@ -9,24 +9,22 @@ from zerotwobot.events import register
 from zerotwobot import telethn as tbot
 
 
-PHOTO = "https://telegra.ph/file/38513d13b5f772f2a36bd.jpg"
+PHOTO = "https://telegra.ph/file/0f182262638ed6ed547a3.jpg"
 
-@register(pattern=("/test"))
+@register(pattern=("/theta"))
 async def awake(event):
-  TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}), I'm Officer Jenny.** \n\n"
-  TEXT += "❍ **I'm Working Properly** \n\n"
-  TEXT += f"❍ **My Master : [AYATO](https://t.me/SILVER_KING)** \n\n"
-  TEXT += f"❍ **Library Version :** `{telever}` \n\n"
-  TEXT += f"❍ **Telethon Version :** `{tlhver}` \n\n"
-  TEXT += f"❍ **Pyrogram Version :** `{pyrover}` \n\n"
-  TEXT += "**Thanks For Adding Me Here ❤️**"
+  TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
+  TEXT += "❍ **TEAM THETA** \n\n"
+  TEXT += f"❍ **CAPTAIN : [AIZEN](https://t.me/above_all_gods)** \n\n"
+  TEXT += f"❍ **VICE CAP : [EREN](https://t.me/ereh_kun)** \n\n"
+  TEXT += f"❍ **IF U WANT TO JOIN TEAM THETA CONTACT CAPTIAN AND VICE CAP\n\n"
   BUTTON = [
       [
-          Button.url("【Support】", "https://t.me/HoriXSupport"),
-          Button.url("【Updates】", "https://t.me/kyouko_update")
+          Button.url("ϑCAPTAINϑ", "https://t.me/above_all_gods"),
+          Button.url("ϑVICE CAPϑ", "https://t.me/ereh_kun")
       ],
       [
-          Button.url("【Support】", "https://t.me/HoriXSupport")
+          Button.url("ϑTEAM THETAϑ", "https://t.me/theta_clique")
       ]
     ]
   await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
