@@ -14,4 +14,4 @@ async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
   TEXT += "❍ **LIST OF POKEMON IN GENERATION 1** \n\n"
   BUTTON = [[Button.url("GEN1", "https://telegra.ph/GEN1-07-08")]]
-  await tbot.send_message(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
+  await tbot.send_message(event.chat_id, caption=TEXT,  buttons=BUTTON)
