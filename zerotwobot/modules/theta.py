@@ -17,7 +17,7 @@ async def awake(event):
   TEXT += "❍ **TEAM THETA** \n\n"
   TEXT += f"❍ **CAPTAIN : [AIZEN](https://t.me/above_all_gods)** \n\n"
   TEXT += f"❍ **VICE CAP : [EREN](https://t.me/ereh_kun)** \n\n"
-  TEXT += f"❍ **IF U WANT TO JOIN TEAM THETA CONTACT CAPTIAN AND VICE CAP\n\n"
+  TEXT += f"❍ **IF U WANT TO JOIN TEAM THETA USE THE BUTTON BELOW\n\n"
   BUTTON = [
       [
           Button.url("ϑCAPTAINϑ", "https://t.me/above_all_gods"),
