@@ -9,8 +9,6 @@ from zerotwobot.events import register
 from zerotwobot import telethn as tbot
 
 
-PHOTO = "https://telegra.ph/file/419036318534e28a6de3d.jpg"
-
 @register(pattern=("/hexa"))
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}), I'm Officer Jenny.** \n\n"
@@ -20,6 +18,5 @@ async def awake(event):
   TEXT += "❍ **Use /natures To list natures command \n\n"
   TEXT += "❍ **Use /types To list types command \n\n"
   TEXT += "❍ *Soon .... We will add Rest 700+ Pokemon* \n\n"
-  TEXT += "**Soon ... We will add about factions**"
   BUTTON = [[Button.url("HeXa", "https://t.me/HeXamonbot?start=1ivnfl3nt91at")]]
-  await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
+  await tbot.send_message(event.chat_id, TEXT,  buttons=BUTTON)
