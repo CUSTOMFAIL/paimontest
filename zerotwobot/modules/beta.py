@@ -21,7 +21,7 @@ async def awake(event):
   BUTTON = [
       [
           Button.url("β CAPTAIN β", "https://t.me/Ig_Sumant"),
-          Button.url("β VICE CAP β", "https://t.me/@Gotchacatchemall")
+          Button.url("β VICE CAP β", "https://t.me/Gotchacatchemall")
       ],
       [
           Button.url("β TEAM BETA β", "https://t.me/betagang")
