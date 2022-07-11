@@ -25,6 +25,9 @@ async def awake(event):
       ],
       [
           Button.url("ϑTEAM THETAϑ", "https://t.me/theta_clique")
+      ],
+      [
+          Button.url("ϑ HOW TO JOIN THETA ϑ", "https://t.me/ThetaRecruitment_bot")
       ]
     ]
   await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
