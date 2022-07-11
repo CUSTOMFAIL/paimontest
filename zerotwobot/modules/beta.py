@@ -9,25 +9,25 @@ from zerotwobot.events import register
 from zerotwobot import telethn as tbot
 
 
-PHOTO = "https://telegra.ph/file/23db949e5f1aaf1b44889.jpg"
+PHOTO = "https://telegra.ph/file/3743f144a6b4c01779cdd.jpg"
 
 @register(pattern=("/beta"))
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
   TEXT += "❍ **TEAM BETA ** \n\n"
-  TEXT += f"❍ **CAPTAIN : [VIKING VECTOR](https://t.me/The_Viking_khilji)** \n\n"
-  TEXT += f"❍ **VICE CAP : [TARUN](https://t.me/NagandlaTarunChowdary)** \n\n"
+  TEXT += f"❍ **CAPTAIN : [SUMANT](https://t.me/Ig_Sumant)** \n\n"
+  TEXT += f"❍ **VICE CAP : [RAJ](https://t.me/Gotchacatchemall)** \n\n"
   TEXT += f"❍ **IF U WANT TO JOIN TEAM GAMMA USE THE BUTTON BELOW\n\n"
   BUTTON = [
       [
-          Button.url("『CAPTAIN』", "https://t.me/The_Viking_khilji"),
-          Button.url("『VICE CAP』", "https://t.me/NagandlaTarunChowdary")
+          Button.url("『CAPTAIN』", "https://t.me/Ig_Sumant"),
+          Button.url("『VICE CAP』", "https://t.me/@Gotchacatchemall")
       ],
       [
-          Button.url("『TEAM BETA』", "https://t.me/GammaFamily")
+          Button.url("『TEAM BETA』", "https://t.me/betagang")
       ],
       [
-          Button.url("『 HOW TO JOIN BETA 』", "https://t.me/GammaRegistration_bot")
+          Button.url("『 HOW TO JOIN BETA 』", "https://t.me/BetaRegistration_Bot")
       ]
     ]
   await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
