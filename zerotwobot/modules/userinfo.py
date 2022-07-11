@@ -312,7 +312,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\n❏ 𝙿𝙾𝚆𝙴𝚁𝚂"
         text += "\n\n◐ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 ADMIN OF BOT 👥."
 
-        text += "\n\n• 𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 | APOSTLE  🚩."
+        text += "\n\n• 𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 | X MOD  🚩."
         disaster_level_present = True
 
     elif user.id in TIGERS:
