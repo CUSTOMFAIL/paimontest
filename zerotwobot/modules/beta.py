@@ -20,14 +20,14 @@ async def awake(event):
   TEXT += f"❍ **IF U WANT TO JOIN TEAM GAMMA USE THE BUTTON BELOW\n\n"
   BUTTON = [
       [
-          Button.url("『CAPTAIN』", "https://t.me/Ig_Sumant"),
-          Button.url("『VICE CAP』", "https://t.me/@Gotchacatchemall")
+          Button.url("β CAPTAIN β", "https://t.me/Ig_Sumant"),
+          Button.url("β VICE CAP β", "https://t.me/@Gotchacatchemall")
       ],
       [
-          Button.url("『TEAM BETA』", "https://t.me/betagang")
+          Button.url("β TEAM BETA β", "https://t.me/betagang")
       ],
       [
-          Button.url("『 HOW TO JOIN BETA 』", "https://t.me/BetaRegistration_Bot")
+          Button.url("β HOW TO JOIN BETA β", "https://t.me/BetaRegistration_Bot")
       ]
     ]
   await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
