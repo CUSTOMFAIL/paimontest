@@ -9,7 +9,7 @@ from zerotwobot.events import register
 from zerotwobot import telethn as tbot
 
 
-@register(pattern=("/reportscammer", "/reportscam"))
+@register(pattern=("/reportscammer"))
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
   TEXT += "❍ **TO REPORT SCAM/SCAMMERS .... TAKE SCREENSHOT OF THE PROOF AND SEND IT TO [SUPPORT](https://t.me/botperosupport) WITH SCAMMER USERNAME  ** \n\n"
