@@ -130,7 +130,7 @@ def addsupport(
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        message.reply_text("This user is already a Demon Disaster.")
+        message.reply_text("This user is already a X MOD")
         return ""
 
     if user_id in WOLVES:
@@ -145,7 +145,7 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as a Demon Disaster!",
+        rt + f"\n{user_member.first_name} was added as a X MOD",
     )
 
     log_message = (
@@ -425,7 +425,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         return log_message
 
     else:
-        message.reply_text("This user is not a Demon level Disaster!")
+        message.reply_text("This user is not a X MOD")
         return ""
 
 
@@ -600,7 +600,7 @@ def supportlist(update: Update, context: CallbackContext):
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML,
     )
-    reply = "<b>Known 𝚇 𝙼𝙾𝙳:</b>\n"
+    reply = "<b>LIST 𝚇 𝙼𝙾𝙳:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
