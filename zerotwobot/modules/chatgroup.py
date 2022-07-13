@@ -9,6 +9,8 @@ from zerotwobot.events import register
 from zerotwobot import telethn as tbot
 
 
+PHOTO = "https://telegra.ph/file/845d1e212b922a023b0d9.jpg"
+
 @register(pattern=("/chatgroup"))
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
@@ -26,4 +28,4 @@ async def awake(event):
           Button.url("AKATSUKI", "https://t.me/HEXA_AKATSUKI")
       ]
     ]
-  await tbot.send_message(event.chat_id, TEXT,  buttons=BUTTON)
+  await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
