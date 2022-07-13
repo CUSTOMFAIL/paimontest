@@ -43,4 +43,4 @@ def supportlist(update: Update, context: CallbackContext):
     
 SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "demons", "xmods"], supportlist, run_async=True)
     
-dispatcher.add_handler(TIGERLIST_HANDLER)
+dispatcher.add_handler(SUPPORTLIST_HANDLER)
