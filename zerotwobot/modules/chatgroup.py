@@ -13,6 +13,8 @@ from zerotwobot import telethn as tbot
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
   TEXT += "❍ **HERE ARE 3 CHAT GRPS WHERE U CAN TALK RELATED TO HEXA** \n\n"
+  TEXT += "❍ **JOIN THESE TO ENJOY HEXA..... INVITE FRIENDS..... MAKE FRIENDS.....** \n\n"
+
   BUTTON = [
       [
           Button.url("CHATTERPOKE", "https://t.me/ChatterPokeandHexa")
