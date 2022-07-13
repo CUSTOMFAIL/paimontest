@@ -9,7 +9,7 @@ from zerotwobot.events import register
 from zerotwobot import telethn as tbot
 
 
-@register(pattern=("/chatgroup"))
+@register(pattern=("/auction"))
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
   TEXT += "❍ **HERE IS ABOUT AUCTION......** \n\n"
