@@ -600,7 +600,7 @@ def supportlist(update: Update, context: CallbackContext):
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML,
     )
-    reply = "<b>Known Demon Disasters 👹:</b>\n"
+    reply = "<b>Known 𝚇 𝙼𝙾𝙳:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -679,13 +679,13 @@ Group admins/group owners do not need these commands.
 
  ╔ *List all special users:*
  ╠ `/dragons`*:* Lists all Dragon disasters
- ╠ `/demons`*:* Lists all Demon disasters
+ ╠ `/xmod`*:* Lists all XMOD disasters
  ╠ `/members`*:* Lists all Ignite disasters
  ╠ `/tigers`*:* Lists all Tigers disasters
  ╠ `/wolves`*:* Lists all Wolf disasters
- ╠ `/heroes`*:* Lists all Zero Two Association members
+ ╠ `/heroes`*:* Lists all Association members
  ╠ `/adddragon`*:* Adds a user to Dragon
- ╠ `/adddemon`*:* Adds a user to Demon
+ ╠ `/addxmod`*:* Adds a user to Demon
  ╠ `/addtiger`*:* Adds a user to Tiger
  ╠ `/addwolf`*:* Adds a user to Wolf
  ╚ `Add dev doesnt exist, devs should know how to add themselves`
@@ -765,11 +765,11 @@ Group admins/group owners do not need these commands.
 
 SUDO_HANDLER = CommandHandler(("addsudo", "adddragon"), addsudo, run_async=True)
 
-SUPPORT_HANDLER = CommandHandler(("addsupport", "adddemon"), addsupport, run_async=True)
+SUPPORT_HANDLER = CommandHandler(("addsupport", "adddemon", "addxmod", "addxmods"), addsupport, run_async=True)
 TIGER_HANDLER = CommandHandler(("addtiger"), addtiger, run_async=True)
 WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addwolf"), addwhitelist, run_async=True)
 UNSUDO_HANDLER = CommandHandler(("removesudo", "removedragon"), removesudo, run_async=True)
-UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removedemon"), removesupport, run_async=True)
+UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removedemon", "removexmod", "removexmods"), removesupport, run_async=True)
 UNTIGER_HANDLER = CommandHandler(("removetiger"), removetiger, run_async=True)
 UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removewolf"), removewhitelist, run_async=True)
 MEMBER_HANDLER = CommandHandler(("addmember"), addmember, run_async=True)
@@ -777,7 +777,7 @@ UNMEMBER_HANDLER = CommandHandler(("removemember"), removemember, run_async=True
                                    
 WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "wolves"], whitelistlist, run_async=True) 
 TIGERLIST_HANDLER = CommandHandler(["tigers"], tigerlist, run_async=True)
-SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "demons"], supportlist, run_async=True)
+SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "demons", "xmods"], supportlist, run_async=True)
 MEMBERLIST_HANDLER = CommandHandler(["members"], memberlist, run_async=True)
 SUDOLIST_HANDLER = CommandHandler(["sudolist", "dragons"], sudolist, run_async=True)
 DEVLIST_HANDLER = CommandHandler(["devlist", "heroes"], devlist, run_async=True)
