@@ -22,6 +22,6 @@ async def awake(event):
   BUTTON = [
       [
           Button.url("FACTIONS", "https://t.me/HeXaFaction"),
-      ],
+      ]
     ]
   await tbot.send_message(event.chat_id, TEXT,  buttons=BUTTON)
