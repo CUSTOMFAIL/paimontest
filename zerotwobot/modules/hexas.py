@@ -55,8 +55,6 @@ TOURNAMENT_HANDLER = DisableAbleCommandHandler("tournament", tournament, run_asy
 NEXTTOUR_HANDLER = DisableAbleCommandHandler("nexttour", nexttour, run_async=True)
 
 dispatcher.add_handler(TOURNAMENT_HANDLER)
-dispatcher.add_handler(GYMS_HANDLER)
-dispatcher.add_handler(PRIZEPOOL_HANDLER)
 dispatcher.add_handler(NEXTTOUR_HANDLER)
 
 __mod_name__ = "Hexa"
