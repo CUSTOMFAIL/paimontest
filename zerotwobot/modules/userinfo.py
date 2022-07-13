@@ -294,7 +294,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\n❏ 𝙿𝙾𝚆𝙴𝚁𝚂"
         text += "\n\n◐ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 OWNER OF BOT👥."
 
-        text += "\n\n• 𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 | GOD 🚩."
+        text += "\n\n• 𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 | GOD AND OWNER OF X MOD 🚩."
         disaster_level_present = True
     elif user.id in DEV_USERS:
         text += "\n\n❏ 𝙿𝙾𝚆𝙴𝚁𝚂"
@@ -585,7 +585,7 @@ GET_BIO_HANDLER = DisableAbleCommandHandler("bio", about_bio, run_async=True)
 STATS_HANDLER = CommandHandler("stats", stats, run_async=True)
 ID_HANDLER = DisableAbleCommandHandler("id", get_id, run_async=True)
 GIFID_HANDLER = DisableAbleCommandHandler("gifid", gifid, run_async=True)
-INFO_HANDLER = DisableAbleCommandHandler(("info", "ignite"), info, run_async=True)
+INFO_HANDLER = DisableAbleCommandHandler(("info", "checkxmod"), info, run_async=True)
 
 SET_ABOUT_HANDLER = DisableAbleCommandHandler("setme", set_about_me, run_async=True)
 GET_ABOUT_HANDLER = DisableAbleCommandHandler("me", about_me, run_async=True)
