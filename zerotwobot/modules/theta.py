@@ -15,12 +15,12 @@ PHOTO = "https://telegra.ph/file/1b0aa314c1c03883384ea.mp4"
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
   TEXT += "❍ **TEAM THETA** \n\n"
-  TEXT += f"❍ **CAPTAIN : [AIZEN](https://t.me/above_all_gods)** \n\n"
+  TEXT += f"❍ **CAPTAIN : [AIZEN](https://t.me/hell_knight_01)** \n\n"
   TEXT += f"❍ **VICE CAP : [EREN](https://t.me/ereh_kun)** \n\n"
   TEXT += f"❍ **IF U WANT TO JOIN TEAM THETA USE THE BUTTON BELOW\n\n"
   BUTTON = [
       [
-          Button.url("ϑCAPTAINϑ", "https://t.me/above_all_gods"),
+          Button.url("ϑCAPTAINϑ", "https://t.me/hell_knight_01"),
           Button.url("ϑVICE CAPϑ", "https://t.me/ereh_kun")
       ],
       [
