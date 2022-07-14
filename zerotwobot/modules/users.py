@@ -1,15 +1,9 @@
 from io import BytesIO
 from time import sleep
 
-from telegram import ParseMode, TelegramError, Update
+from telegram import TelegramError, Update
+from telegram.ext import CallbackContext, CommandHandler, Filters, MessageHandler, run_async
 from telegram.error import BadRequest, Unauthorized
-from telegram.ext import (
-    CallbackContext,
-    CommandHandler,
-    Filters,
-    MessageHandler,
-)
-from telegram.utils.helpers import escape_markdown
 
 import zerotwobot.modules.sql.users_sql as sql
 from zerotwobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
@@ -34,26 +28,23 @@ def get_user_id(username):
     if not users:
         return None
 
-    elif len(users) == 1:
+    if len(users) == 1:
         return users[0].user_id
+    for user_obj in users:
+        try:
+            userdat = dispatcher.bot.get_chat(user_obj.user_id)
+            if userdat.username == username:
+                return userdat.id
 
-    else:
-        for user_obj in users:
-            try:
-                userdat = dispatcher.bot.get_chat(user_obj.user_id)
-                if userdat.username == username:
-                    return userdat.id
-
-            except BadRequest as excp:
-                if excp.message == "Chat not found":
-                    pass
-                else:
-                    LOGGER.exception("Error extracting user ID")
+        except BadRequest as excp:
+            if excp.message == "Chat not found":
+                pass
+            else:
+                LOGGER.exception("Error extracting user ID")
 
     return None
 
-
-
+@run_async
 @dev_plus
 def broadcast(update: Update, context: CallbackContext):
     to_send = update.effective_message.text.split(None, 1)
@@ -76,30 +67,29 @@ def broadcast(update: Update, context: CallbackContext):
                 try:
                     context.bot.sendMessage(
                         int(chat.chat_id),
-                        escape_markdown(to_send[1], 2),
-                        parse_mode=ParseMode.MARKDOWN_V2,
+                        to_send[1],
+                        parse_mode="MARKDOWN",
                         disable_web_page_preview=True,
                     )
-                    sleep(1)
-                except TelegramError as e:
+                    sleep(0.1)
+                except TelegramError:
                     failed += 1
         if to_user:
             for user in users:
                 try:
                     context.bot.sendMessage(
                         int(user.user_id),
-                        escape_markdown(to_send[1], 2),
-                        parse_mode=ParseMode.MARKDOWN_V2,
+                        to_send[1],
+                        parse_mode="MARKDOWN",
                         disable_web_page_preview=True,
                     )
-                    sleep(1)
-                except TelegramError as e:
+                    sleep(0.1)
+                except TelegramError:
                     failed_user += 1
         update.effective_message.reply_text(
             f"Broadcast complete.\nGroups failed: {failed}.\nUsers failed: {failed_user}.",
         )
-
-
+        
 
 def log_user(update: Update, context: CallbackContext):
     chat = update.effective_chat
