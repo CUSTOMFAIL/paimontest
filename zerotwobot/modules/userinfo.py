@@ -272,7 +272,7 @@ def info(update: Update, context: CallbackContext):
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
         text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
-        text += ' [<a href="https://t.me/xmodnews/4">‼️</a>]'.format(
+        text += ' [<a href="https://t.me/xmodnews/4">‼🌟</a>]'.format(
             bot.username,
 
          ) 
@@ -294,7 +294,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\n❏ 𝙿𝙾𝚆𝙴𝚁𝚂"
         text += "\n\n◐ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 OWNER OF BOT👥."
 
-        text += "\n\n• 𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 | GOD AND OWNER OF X MOD 🚩."
+        text += "\n\n• 𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 | GOD AND OWNER OF x ɱօԃ 🚩."
         disaster_level_present = True
     elif user.id in DEV_USERS:
         text += "\n\n❏ 𝙿𝙾𝚆𝙴𝚁𝚂"
@@ -312,7 +312,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\n❏ 𝙿𝙾𝚆𝙴𝚁𝚂"
         text += "\n\n◐ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 ADMIN OF BOT 👥."
 
-        text += "\n\n• 𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 | X MOD  🚩."
+        text += "\n\n• 𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 | x ɱօԃ  🚩."
         disaster_level_present = True
 
     elif user.id in TIGERS:
@@ -330,7 +330,7 @@ def info(update: Update, context: CallbackContext):
         
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/xmodnews/2">‼️</a>]'.format(
+        text += ' [<a href="https://t.me/xmodnews/2">🌟🌟</a>]'.format(
             bot.username,
 
         )
