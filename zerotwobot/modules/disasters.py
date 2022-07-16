@@ -593,7 +593,6 @@ def tigerlist(update: Update, context: CallbackContext):
 
 
 
-@whitelist_plus
 def supportlist(update: Update, context: CallbackContext):
     bot = context.bot
     m = update.effective_message.reply_text(
