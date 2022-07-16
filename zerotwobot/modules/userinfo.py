@@ -316,7 +316,10 @@ def info(update: Update, context: CallbackContext):
         disaster_level_present = True
 
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Tiger'."
+        text += "\n\n❏ 𝙿𝙾𝚆𝙴𝚁𝚂"
+        text += "\n\n◐ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 ADMIN OF BOT 👥."
+
+        text += "\n\n• 𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 | 𝑦 ɱօԃ  🚩."
         disaster_level_present = True
     
     elif user.id in WOLVES:
