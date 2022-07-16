@@ -576,9 +576,8 @@ def whitelistlist(update: Update, context: CallbackContext):
 
 
 
-@whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Tiger Disasters 🐯:</b>\n"
+    reply = "<b>Known Y MOD:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML,
     )
