@@ -341,7 +341,7 @@ def fp(update: Update, context: CallbackContext):
     reply_text(r"Woh to gay h")
     reply_text(r"huh bahut bol liya ... dil par mat lena")
     
-MEWTWO_HANDLER = DisableAbleCommandHandler("mewtwo_fuck", mewtwo, run_async=True)
+MEWTWO_HANDLER = DisableAbleCommandHandler("mewtwo fuck", mewtwo, run_async=True)
 TYRANITAR_HANDLER = DisableAbleCommandHandler("tyranitar", tyranitar, run_async=True)
 ARTICUNO_HANDLER = DisableAbleCommandHandler("articuno", articuno, run_async=True)
 TAPU_HANDLER = DisableAbleCommandHandler("tapu", tapu, run_async=True)
