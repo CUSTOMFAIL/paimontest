@@ -115,11 +115,11 @@ def ban(update: Update, context: CallbackContext) -> str:
                 message.reply_text("I can't act against our own.")
             elif user_id in DRAGONS:
                 message.reply_text(
-                    "Fighting this Dragon here will put me and my people's at risk.",
+                    "Fighting this X MOD RANK here will put me and my people's at risk.",
                 )
             elif user_id in DEMONS:
                 message.reply_text(
-                    "Bring an order from Black Bulls to fight a Demon disaster.",
+                    "Bring an order from BAJI to fight a Y MOD RANK.",
                 )
             elif user_id in TIGERS:
                 message.reply_text(
