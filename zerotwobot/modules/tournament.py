@@ -16,16 +16,18 @@ async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
   TEXT += "**DICE TOURNAMENT** \n\n\n"
   TEXT += "**RULES** \n\n"
+  TEXT += f"❍ ** Participation fee - 250** \n\n"
   TEXT += f"❍ ** Only 36 players** \n\n"
   TEXT += f"❍ ** 6 TEAMS, Each team 6 players** \n\n"
   TEXT += f"❍ ** Players will roll dice to join the team whose numbers come on dice. If team full and a player get the number of full team then re roll.** \n\n"
   TEXT += f"❍ ** To decide team leaders any experinced player will be chosen** Team leader role will be only for matchmaking not for ordering. \n\n"
-  TEXT += f"❍ ** Matchmaking depends will depend on dice. Orgainser will role dice. Which ever number come the dice will go to that team leader and then tean leader will role to battle which ever team they roll on.** \n\n"
+  TEXT += f"❍ ** Matchmaking depends will depend on dice. Organiser will role dice. Which ever number come the dice will go to that team leader and then team leader will role to battle which ever team they roll on.** \n\n"
   TEXT += f"❍ ** Interteam matches will also depend on dice** \n\n"
   TEXT += f"❍ ** 0L or 6L will depend on dice ** \n\n"
-  TEXT += f"❍ ** No. Of pokeon in a team will depend on dice** \n\n"
+  TEXT += f"❍ ** No. Of pokemon in a team will depend on dice** \n\n"
   TEXT += f"❍ ** Fair or Luck will depend on dice** \n\n"
   TEXT += f"❍ ** Inshort everything depends on dice** \n\n"
+  TEXT += f"❍ ** Use /participants for participants list** \n\n"
   BUTTON = [
       [
           Button.url("TOURNAMENT", "https://t.me/xmodnews/8"),
