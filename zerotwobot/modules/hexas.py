@@ -21,7 +21,7 @@ def nexttour(update: Update, context: CallbackContext):
         "COMING SOON",
     )
 
-def participants(update: Update, context: CallbackContext):
+def prizepool(update: Update, context: CallbackContext):
     msg = update.effective_message
     reply_text = (
         msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
@@ -30,7 +30,7 @@ def participants(update: Update, context: CallbackContext):
         "Prize pool for dice tour\n\n1st- 15k + X MOD FOR A MONTH\n2nd- 10k\n3rd- 5k",
     )
 
-def prizepool(update: Update, context: CallbackContext):
+def participants(update: Update, context: CallbackContext):
     msg = update.effective_message
     reply_text = (
         msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
