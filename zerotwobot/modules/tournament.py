@@ -29,6 +29,10 @@ async def awake(event):
   TEXT += f"❍ ** Fair or Luck will depend on dice** \n\n"
   TEXT += f"❍ ** Inshort everything depends on dice** \n\n"
   TEXT += f"❍ ** Use /participants for participants list** \n\n"
+  TEXT += f"❍ ** PRIZE** \n"
+  TEXT += f" ** 1st - 15k + X MOD RANK (1 MONTH)** \n"
+  TEXT += f" ** 2nd - 10k ** \n"
+  TEXT += f" ** 3rd - 5k**"
   BUTTON = [
       [
           Button.url("TOURNAMENT", "https://t.me/xmodnews/8"),
