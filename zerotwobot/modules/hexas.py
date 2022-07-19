@@ -27,7 +27,7 @@ def participants(update: Update, context: CallbackContext):
         msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
     )
     reply_text(
-        "Here are the list of participants for dice tour\n 1. [Dhruva](https://t.me/nothing_here_get_lost)",
+        "Here are the list of participants for dice tour. \n Yet to be updated",
     )
     
 __help__ = """
