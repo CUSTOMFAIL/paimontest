@@ -27,6 +27,15 @@ def participants(update: Update, context: CallbackContext):
         msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
     )
     reply_text(
+        "Prize pool for dice tour\n\n1st- 15k + X MOD FOR A MONTH\n2nd- 10k\n3rd- 5k",
+    )
+
+def prizepool(update: Update, context: CallbackContext):
+    msg = update.effective_message
+    reply_text = (
+        msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
+    )
+    reply_text(
         "Here are the list of participants for dice tour. \n Yet to be updated",
     )
     
@@ -54,10 +63,11 @@ __help__ = """
 
 NEXTTOUR_HANDLER = DisableAbleCommandHandler("nexttour", nexttour, run_async=True)
 PARTICIPANTS_HANDLER = DisableAbleCommandHandler("participants", participants, run_async=True)
-
+PRIZEPOOL_HANDLER = DisableAbleCommandHandler("prizepool", prizepool, run_async=True)
 
 dispatcher.add_handler(NEXTTOUR_HANDLER)
 dispatcher.add_handler(PARTICIPANTS_HANDLER)
+dispatcher.add_handler(PRIZEPOOL_HANDLER)
 
 
 __mod_name__ = "Hexa"
