@@ -11,14 +11,6 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext
 
-def tournament(update: Update, context: CallbackContext):
-    msg = update.effective_message
-    reply_text = (
-        msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
-    )
-    reply_text(
-        "NO ACTIVE TOUR ",
-    )
     
 def nexttour(update: Update, context: CallbackContext):
     msg = update.effective_message
@@ -51,10 +43,8 @@ __help__ = """
  `■ /{NATURENAME - To know about that nature. For example - /lonely`
 """
 
-TOURNAMENT_HANDLER = DisableAbleCommandHandler("tournament", tournament, run_async=True)
 NEXTTOUR_HANDLER = DisableAbleCommandHandler("nexttour", nexttour, run_async=True)
 
-dispatcher.add_handler(TOURNAMENT_HANDLER)
 dispatcher.add_handler(NEXTTOUR_HANDLER)
 
 __mod_name__ = "Hexa"
