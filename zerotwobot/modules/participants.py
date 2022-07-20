@@ -19,8 +19,8 @@ async def awake(event):
           Button.url("2. Dhruva", "https://t.me/nothing_here_get_lost")
       ],
       [
-          Button.url("3. Ishtar", "https://t.me/ishtar_sensei"),
-          Button.url("4. Sooryadev", "https://t.me/sooryadev45")
+          Button.url("3. Duke", "https://t.me/CageOfSolutions"),
+          Button.url("4. Ishtar", "https://t.me/sishtar_sensei")
       ],
       [
           Button.url("5. Ekansh", "https://t.me/legendeku"),
@@ -33,6 +33,30 @@ async def awake(event):
       [
           Button.url("9. Buttercup", "https://t.me/itz_butter_cup"),
           Button.url("10. Morty", "https://t.me/Morty_4_life")
-      ]
+      ],
+      [
+          Button.url("11. Shubh", "https://t.me/Angry_bird_0"),
+          Button.url("12. Satya", "https://t.me/satya94925")
+      ],
+      [
+          Button.url("13. Irfan", "https://t.me/Candycrush001"),
+          Button.url("14. Krish", "https://t.me/Nothing8002")
+      ],
+      [
+          Button.url("15. Sam", "https://t.me/i_am_vey_bussy_person"),
+          Button.url("16. Apex", "https://t.me/Apex_boss")
+      ],
+      [
+          Button.url("17. Vyanki", "https://t.me/CaptainDOfficial"),
+          Button.url("18. Sooryadev", "https://t.me/sooryadev45")
+      ],
+      [
+          Button.url("19. Demonking", "https://t.me/Demonking2004"),
+          Button.url("20. RK", "https://t.me/Lovelyxyz")
+      ],
+      [
+          Button.url("21. Monster", "https://t.me/Monster79990"),
+          Button.url("22. Subansh", "https://t.me/Subansh41")
+      ],
     ]
   await tbot.send_message(event.chat_id, TEXT,  buttons=BUTTON)
