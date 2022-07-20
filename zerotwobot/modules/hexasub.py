@@ -20,17 +20,6 @@ def natures(update: Update, context: CallbackContext):
         "Nature are a mechanic that influences how a Pokémon stats grow.\nNature effect is limited to only 10%.\nHere are the list of commands\n\n/hardy - About hardy natured pokemon.\n/lonely - About lonely natured pokemon.\n/brave - About brave natured pokemon.\n/adamant - About adamant natured pokemon.\n/naughty - About naughty natured pokemon.\n/bold - About bold natured pokemon.\n/docile - About docile natured pokemon.\n/relaxed - About relaxed natured pokemon.\n/impish - About impish natured pokemon.\n/lax - About lax natured pokemon.\n/modest - About modest natured pokemon.\n/mild - About mild natured pokemon.\n/serious - About serious natured pokemon.\n/quiet - About quiet natured pokemon.\n/rash - About rash natured pokemon.\n/calm - About calm natured pokemon.\n/gentle - About gentle natured pokemon.\n/sassy - About sassy natured pokemon.\n/bashful - About bashful natured pokemon.\n/careful - About careful natured pokemon.\n/timid - About timid natured pokemon.\n/hasty - About hasty natured pokemon.\n/jolly - About jolly natured pokemon.\n/naive - About naive natured pokemon.\n/quirky - About quirky natured pokemon",
     )
     
-    
-__help__ = """
-• `/test`*:* About Hexa
- • `/mfs`*:* List all types and sub commands
- • `/type(typename)`*:* About that type
- • `/ptype`*:* Use and see
- • `/data(pokename)`*:* About that pokemon
- • `natures`*:* List of all Natures and sub commands
-"""
 NATURES_HANDLER = DisableAbleCommandHandler("natures", natures, run_async=True)
     
 dispatcher.add_handler(NATURES_HANDLER)
-
-__mod_name__ = "Test"
