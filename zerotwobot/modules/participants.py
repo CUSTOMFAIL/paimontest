@@ -32,6 +32,8 @@ async def awake(event):
       ],
       [
           Button.url("9. Buttercup", "https://t.me/itz_butter_cup"),
+          Button.url("10. Morty", "https://t.me/Morty_4_life")
+
       ]
     ]
   await tbot.send_message(event.chat_id, TEXT,  buttons=BUTTON)
