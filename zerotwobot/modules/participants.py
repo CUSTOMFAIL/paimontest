@@ -58,5 +58,9 @@ async def awake(event):
           Button.url("21. Monster", "https://t.me/Monster79990"),
           Button.url("22. Subansh", "https://t.me/Subansh41")
       ],
+      [
+          Button.url("23. Vibhu", "https://t.me/lucarioaurra"),
+          Button.url("24. Abid", "https://t.me/asta_kunn")
+      ]
     ]
   await tbot.send_message(event.chat_id, TEXT,  buttons=BUTTON)
