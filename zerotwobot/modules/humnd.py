@@ -5,7 +5,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     Message,
 )
-from Shikimori import pbot
+from Zerotwobot import pbot
 
 
 @pbot.on_message(filters.command(["cum", "editor"]))
