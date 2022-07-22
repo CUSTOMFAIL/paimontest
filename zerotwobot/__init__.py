@@ -6,9 +6,12 @@ import time
 import spamwatch
 
 import telegram.ext as tg
+from pyrogram.types import Message
 from telegram import __version__ as ptb_version
 from telegram import bot_api_version
+from pyrogram import Client, filters
 from telethon import TelegramClient
+from aiohttp import ClientSession
 from dotenv import load_dotenv
 from Python_ARQ import ARQ
 
@@ -203,6 +206,8 @@ else:
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("zero-two", API_ID, API_HASH)
 dispatcher = updater.dispatcher
+
+pbot = Client("ZerotwoPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
