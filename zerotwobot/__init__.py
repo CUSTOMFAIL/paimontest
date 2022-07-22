@@ -7,9 +7,11 @@ import spamwatch
 
 import telegram.ext as tg
 from telegram import __version__ as ptb_version
+from pyrogram import Client, errors
 from telegram import bot_api_version
 from telethon import TelegramClient
 from dotenv import load_dotenv
+from telethon.sessions import MemorySession
 from Python_ARQ import ARQ
 
 load_dotenv()
@@ -100,6 +102,7 @@ if ENV:
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     ARQ_API_URL = "https://arq.hamker.in"
     ARQ_API_KEY = "ZEYTAH-MROSWY-HRJHRJ-ZZYCAG-ARQ"
+    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
 
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     DB_URI = os.environ.get("DATABASE_URL")
@@ -189,6 +192,13 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
+
+client = TelegramClient(MemorySession(), API_ID, API_HASH)
+updater = tg.Updater(
+    TOKEN,
+    workers=min(32, os.cpu_count() + 4),
+    request_kwargs={"read_timeout": 10, "connect_timeout": 10},
+)
 
 if not SPAMWATCH_API:
     sw = None
