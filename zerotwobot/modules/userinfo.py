@@ -257,11 +257,6 @@ def info(update: Update, context: CallbackContext):
     if chat.type != "private" and user_id != bot.id:
         _stext = "\n ◐ 𝙿𝙾𝚂𝙸𝚃𝙸𝙾𝙽 | <code>{}</code>"
 
-        afk_st = is_afk(user.id)
-        if afk_st:
-            text += _stext.format("AFK")
-        else:
-            status = status = bot.get_chat_member(chat.id, user.id).status
             if status:
                 if status in {"𝙻𝙴𝙵𝚃", "𝙺𝙸𝙲𝙺𝙴𝙳"}:
                     text += _stext.format("Not here")
