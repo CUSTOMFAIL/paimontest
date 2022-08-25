@@ -1,0 +1,113 @@
+user_cache = {}
+
+@client.on(events.NewMessage(pattern='/sell'))
+async def sell(event):
+    sender = await event.get_sender()
+    if sender.username:
+        await client.send_message(event.sender_id, "Hello @"+sender.username+"!\n\nWould you like to sell something in auction"
+            ,
+            buttons=[
+            [
+                Button.inline('Yes', 'yes')
+            ],
+            [
+                Button.inline('No', 'No')
+            ]
+          ]
+        )
+    else:
+        await client.send_message(event.sender_id, "Hello!\n\nWould you like to sell something in auction"
+            ,
+            buttons=[
+            [
+                Button.inline('Yes', 'yes')
+            ],
+            [
+                Button.inline('No', 'No')
+            ]
+          ]
+        )
+
+@client.on(events.CallbackQuery(data='No'))
+async def nocb(event):
+    await client.edit_message(event.sender_id, event.message_id, "Ok! I understand", buttons=Button.clear())
+
+@client.on(events.CallbackQuery(data='yes'))
+async def yescb(event):
+    await client.edit_message(event.sender_id, event.message_id, "So what would you like to sell?"
+        ,
+        buttons=[
+        [
+            Button.inline('LEGENDARY', 'legendary')
+        ]
+     ]
+    )
+
+@client.on(events.CallbackQuery(data='legendary'))
+async def legendarycb(event):
+    await client.edit_message(event.sender_id, event.message_id, 'OK! Legendary', buttons=Button.clear())
+    sender = await event.get_sender()
+    user_id = event.sender_id
+    msgid = event.message_id
+    sheesh = str(user_id)
+    if sender.username:
+        async with client.conversation(user_id) as conv:
+            await conv.send_message('Forward Nature Pic of pokemon')
+            response = await conv.get_response(timeout = 90000)
+            if response.media:
+                name = response.text
+                sugma = name
+                print(sugma)
+                await conv.send_message('Forward Evs Pic of pokemon')
+                respo =  await conv.get_response(timeout = 90000)
+                if respo.media:
+                    lol = respo.text
+                    huh = respo.media
+                    user_cache[user_id] = {}
+                    user_cache[user_id]['sname'] = {sugma : {}}
+                    user_cache[user_id]['sname'][sugma]['ID'] = user_id
+                    user_cache[user_id]['sname'][sugma]['image'] = huh
+                    await conv.send_message('Forward moveset pic of pokemon')
+                    x = await conv.get_response(timeout = 90000)
+                    if x.media:
+                        lmao = x.text
+                        await conv.send_message('Set base')
+                        bbb = await conv.get_response(timeout = 90000)
+                        ccc = bbb.text
+                        hmm = "#Legendary\nUser id - "+sheesh+"\nUsername : @"+sender.username+"\n\nAbout Pokemon:- \n"+name+"\n\nEvs and Ivs:-\n"+lol+"\n\nMoveset:- \n"+lmao+"\n\nBase - "+ccc
+                        user_cache[user_id]['sname'][sugma]['text'] = hmm
+                        await client.send_file(event.sender_id, file = huh, caption = hmm
+                            ,
+                            buttons=[
+                            [
+                                Button.inline('SUBMIT', 'submit')
+                            ],
+                            [
+                                Button.inline('Delete', 'delete')
+                            ]
+                          ]
+                        )
+                    else:
+                        await client.send_message(user_id, "A error occured please restart the process. Please send the pic with moveset too. If the pic isnt present error will happen again")
+                else:
+                    await client.send_message(user_id, "A error occured please restart the process. Please send the pic with evs and ivs too. If the pic isnt present error will happen again")
+            else:
+                await client.send_message(user_id, "A error occured please restart the process. Please send the pic with nature too. If the pic isnt present error will happen again")
+
+
+
+@client.on(events.CallbackQuery(data='submit'))
+async def submitcb(event):
+    await client.edit_message(event.sender_id, event.message_id, user_cache[event.sender_id]['sname'][sugma]['text']+"\n\nSUBMITED\nCheck @pendingauctionpokemon to see status of your pokemon", buttons=Button.clear())
+    await client.send_file(log_channel, user_cache[event.sender_id]['sname'][sugma]['image'], caption = user_cache[event.sender_id]['sname'][sugma]['text']
+        ,
+        buttons=[
+        [
+            Button.inline('APPROVE', 'approve')
+        ]
+      ]
+    )
+
+@client.on(events.CallbackQuery(data='delete'))
+async def deletecb(event):
+    await client.edit_message(event.sender_id, event.message_id, "RESPONSE DELETED", buttons=Button.clear())
