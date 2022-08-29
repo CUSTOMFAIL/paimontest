@@ -954,7 +954,7 @@ UNPINALL_HANDLER = CommandHandler("unpinall", unpinall, filters=Filters.chat_typ
 
 INVITE_HANDLER = DisableAbleCommandHandler("invitelink", invite, run_async=True)
 
-PROMOTE_HANDLER = DisableAbleCommandHandler("promote", promote, run_async=True)
+PROMOTE_HANDLER = DisableAbleCommandHandler(("jenny promote", [""]), promote, run_async=True)
 DEMOTE_HANDLER = DisableAbleCommandHandler("demote", demote, run_async=True)
 
 SET_TITLE_HANDLER = CommandHandler("title", set_title, run_async=True)
